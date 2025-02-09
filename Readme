@@ -1,0 +1,12 @@
+docker run --name mysql-container \
+  -e MYSQL_ROOT_PASSWORD=rootpassword \
+  -e MYSQL_DATABASE=mydatabase \
+  -e MYSQL_USER=user \
+  -e MYSQL_PASSWORD=password \
+  -p 3306:3306 \
+  -d mysql:8.0
+
+to run in local
+enable virtual environment
+pip install -r requirements.txt
+uvicorn app_a:app --reload --host 0.0.0.0 --port 8000
